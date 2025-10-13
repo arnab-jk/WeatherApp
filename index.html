@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TrueWeather</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>True<span>Weather</span></h1>
+      <button id="toggle-theme" title="Toggle Dark Mode">🌙</button>
+    </header>
+
+    <form id="search-form" autocomplete="off">
+      <input id="city-input" type="text" placeholder="🔍  Search city..." required />
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="status" class="status"></div>
+
+    <section id="result" class="result hidden">
+      <div class="weather-card">
+        <div class="top">
+          <img id="weather-icon" alt="icon" />
+          <div>
+            <h2 id="city-name"></h2>
+            <p id="description"></p>
+          </div>
+        </div>
+
+        <div class="details">
+          <div><span>🌡️</span> Temp: <span id="temp"></span>°C</div>
+          <div><span>🤔</span> Feels like: <span id="feels-like"></span>°C</div>
+          <div><span>💧</span> Humidity: <span id="humidity"></span>%</div>
+          <div><span>💨</span> Wind: <span id="wind"></span> m/s</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="history" class="history">
+      <h3>Recent Searches</h3>
+      <ul id="history-list"></ul>
+      <button id="clear-history" class="clear-btn">Clear History</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
